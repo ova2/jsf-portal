@@ -1,0 +1,14 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="#{navigationContext.masterLayoutTemplate}">
+    <ui:define name="content">
+        <p:pieChart id="custom" value="#{chartBeanB.pieModel}" legendPosition="e"
+                    fill="false" showDataLabels="true"
+                    title="Custom Options" style="width:400px; height:300px; margin:100px;"
+                    sliceMargin="5" diameter="150"/>
+        
+        <p:button value="#{msgs['jsftoolkit.login.button.back']}"
+                  outcome="/modb/views/hello" style="margin-left:100px;"/>
+    </ui:define>
+</ui:composition>

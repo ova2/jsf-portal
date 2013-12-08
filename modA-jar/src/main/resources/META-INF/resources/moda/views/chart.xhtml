@@ -1,0 +1,22 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+                template="#{navigationContext.masterLayoutTemplate}">
+    <ui:define name="content">
+        <p:pieChart id="sample" value="#{chartBeanA.pieModel}" legendPosition="w"
+                    title="Sample Pie Chart" style="width:400px; height:300px; margin:100px;"/>
+
+        <h:panelGrid columns="3">
+            <p:button value="#{msgs['jsftoolkit.login.button.back']}"
+                      outcome="/moda/views/hello" style="margin-left:100px;"/>
+
+            <p:commandButton icon="ui-icon-play" process="@this" update="dummyPanel"
+                             action="#{chartBeanA.toggleShowPanel}"
+                             style="margin-left:120px;"/>
+
+            <p:panel id="dummyPanel" visible="#{chartBeanA.showPanel}" style="margin-left:20px">
+                Dummy Panel
+            </p:panel>
+        </h:panelGrid>
+    </ui:define>
+</ui:composition>

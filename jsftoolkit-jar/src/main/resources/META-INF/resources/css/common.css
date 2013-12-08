@@ -1,0 +1,123 @@
+html, body {
+    font-family: Segoe UI, Arial, "Trebuchet MS", sans-serif;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: auto;
+}
+
+input,
+select,
+textarea,
+button,
+.ui-widget,
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button,
+.ui-widget-header,
+.ui-widget-content,
+.ui-widget-header .ui-widget-header,
+.ui-widget-content .ui-widget-content {
+    font-family: Segoe UI, Arial, "Trebuchet MS", sans-serif;
+    font-size: 12px !important;
+}
+
+.ui-chkbox {
+    vertical-align: middle;
+}
+
+.ui-selectoneradio label,
+.ui-selectmanycheckbox label {
+    margin-left: 5px;
+}
+
+.ui-datatable .ui-filter-column .ui-column-filter {
+    width: 60%;
+}
+
+.ui-datatable .iconcell {
+    text-align: center;
+    width: 1%;
+}
+
+.ui-datatable .iconcell .ui-button-icon-only {
+    width: 24px;
+}
+
+.ui-datatable .iconcell .ui-button .ui-button-text {
+    line-height: 22px;
+    height: 22px;
+}
+
+.ui-datatable .iconcell .ui-button-icon-only .ui-button-text {
+    padding: 0;
+}
+
+.ui-radiobutton .ui-radiobutton-box {
+    outline: none;
+}
+
+.ui-fieldset {
+    padding: 0 0 0 1em;
+}
+
+.ui-fieldset-content {
+    padding: 12px 12px 12px 0;
+}
+
+.ui-tooltip {
+    max-width: 400px;
+}
+
+.ui-inputfield,
+.ui-widget-content .ui-inputfield,
+.ui-widget-header .ui-inputfield {
+    cursor: text;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.noborder {
+    border: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.firstbtn {
+    margin-top: 13px;
+}
+
+.btn {
+    margin-top: 13px;
+    margin-left: 3px;
+}
+
+table .formLabel,
+table .formEdit {
+    vertical-align: middle;
+    padding: 4px 20px 4px 0;
+}
+
+table .formLabel {
+    padding: 4px 7px 4px 0;
+    text-align: right;
+    white-space: nowrap;
+    font-weight: bold;
+    width: 1%;
+}
+
+.headline-main-right {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+
+.headline-main-right .setPanelBtn {
+    margin-right: 10px;
+}

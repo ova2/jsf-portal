@@ -1,0 +1,56 @@
+#headline-main-left {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+}
+
+#loggedInIcon {
+    float: left;
+    margin-right: 3px;
+}
+
+#portalWelcome {
+    width: 100%;
+    text-align: center;
+    margin: 70px 0 0 0;
+    font-size: 16px;
+}
+
+#modGridContent {
+    list-style-type: none;
+    margin: 50px 20px 20px 20px;
+}
+
+#modGridContent div.modGroupEntry {
+    position: relative;
+    font-size: 14px !important;
+    max-width: 470px;
+    min-height: 125px;
+    margin: 10px;
+    padding: 5px;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#modGridContent div.modGroupEntry .version {
+    position: absolute;
+    bottom: 13px;
+    margin: 0 8px 0 8px;
+    font-size: 11px;
+}
+
+#modGridContent .modGridEntry td.modLogo {
+    vertical-align: middle;
+    text-align: center;
+}
+
+#modGridContent .modGridEntry td.modLogo img {
+    vertical-align: middle;
+}
+
+#modGridContent .modGridEntry td.modTxt {
+    vertical-align: top;
+    text-align: left;
+    padding: 8px;
+}

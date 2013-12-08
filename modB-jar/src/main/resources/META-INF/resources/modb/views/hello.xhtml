@@ -1,0 +1,23 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="#{navigationContext.masterLayoutTemplate}">
+    <ui:define name="content">
+        <table style="margin:100px;">
+            <tr>
+                <td>
+                    <h:graphicImage library="modb" name="images/logo.png" styleClass="noborder"/>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:20px 0 20px 0;">
+                    <h:outputText value="#{msgs['b.hello']}"/>
+                </td>
+            </tr>
+        </table>
+        
+        <p:button value="#{msgs['b.showChart']}"
+                  outcome="/modb/views/chart" style="margin-left:100px;"/>
+    </ui:define>
+</ui:composition>

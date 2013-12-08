@@ -1,0 +1,18 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <div class="headline-main-right">
+        <p:commandButton id="setPanelBtn" styleClass="setPanelBtn" value="#{msgs['jsftoolkit.settings']}" type="button"/>
+        <p:commandButton value="#{msgs['jsftoolkit.logout']}" icon="ui-icon-power" ajax="false"
+                         action="#{logoutController.logout}" immediate="true"/>
+    </div>
+    
+    <p:overlayPanel id="overlaySetPanel" for="setPanelBtn" showEffect="blind" dynamic="true"
+                    my="center top" at="center bottom" widgetVar="overlaySetPanelWdgt">
+        <ui:include src="/facelets/headline/settings.xhtml"/>
+    </p:overlayPanel>
+
+</ui:composition>
