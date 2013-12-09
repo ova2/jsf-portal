@@ -1,6 +1,6 @@
 package ova.util;
 
-import org.apache.myfaces.extensions.cdi.core.api.provider.BeanManagerProvider;
+import org.apache.deltaspike.core.api.provider.BeanManagerProvider;
 
 import javax.enterprise.context.spi.CreationalContext;
 import javax.enterprise.inject.spi.Bean;

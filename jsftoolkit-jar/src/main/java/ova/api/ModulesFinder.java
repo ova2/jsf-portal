@@ -1,5 +1,7 @@
 package ova.api;
 
+import org.primefaces.extensions.model.fluidgrid.FluidGridItem;
+
 import java.util.List;
 
 
@@ -13,7 +15,7 @@ public interface ModulesFinder
 	/**
 	 * Gets a list of available modules in a modular JSF application.
 	 *
-	 * @return List<ModuleDescription> List of instances of {@link ModuleDescription}.
+	 * @return List<FluidGridItem> List of instances of {@link ModuleDescription}.
 	 */
-	List<ModuleDescription> getModules();
+	List<FluidGridItem> getModules();
 }

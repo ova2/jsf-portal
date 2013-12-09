@@ -15,6 +15,10 @@
     </h:head>
     <h:body>
         <h:form id="mainForm" prependId="false">
+            <p:button value="#{msgs['jsftoolkit.backToPortal']}" outcome="/views/portalHome"
+                             rendered="#{navigationContext.withinPortal}"
+                             styleClass="headline-main-right"/>
+            
             <h:panelGroup layout="block">
                 <ui:insert name="content"/>
             </h:panelGroup>

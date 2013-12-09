@@ -2,21 +2,20 @@
                 xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:f="http://java.sun.com/jsf/core"
                 xmlns:p="http://primefaces.org/ui"
-                xmlns:ui="http://java.sun.com/jsf/facelets"
-                xmlns:jt="http://scalaris.com/ui/jsftoolkit">
+                xmlns:ui="http://java.sun.com/jsf/facelets">
 
     <div style="padding:10px">
         <h:panelGrid id="portalSettingsGrid" style="width:1px" columns="2" columnClasses="formLabel,formEdit">
             <h:outputText value="#{msgs['jsftoolkit.lang']}"/>
             <p:selectOneMenu id="lang" value="#{userSettingsData.locale}">
-                <jt:convertLocale/>
+                <f:converter converterId="org.primefaces.extensions.converter.LocaleConverter"/>
                 <f:selectItems value="#{userSettingsData.locales}"/>
                 <p:ajax event="change" listener="#{userSettingsData.saveSettings}"/>
             </p:selectOneMenu>
 
             <h:outputText value="#{msgs['jsftoolkit.theme']}"/>
             <p:selectOneMenu id="themeSelectMenu" value="#{userSettingsData.theme}" var="theme" effect="drop">
-                <f:converter converterId="ip.client.jsftoolkit.ThemeConverter"/>
+                <f:converter converterId="jsftoolkit.ThemeConverter"/>
                 <f:selectItems value="#{userSettingsData.availableThemes}"
                                var="t"
                                itemLabel="#{t.name}"
@@ -30,12 +29,6 @@
                 </p:column>
             </p:selectOneMenu>
         </h:panelGrid>
-
-        <ui:remove>
-        <p:commandButton value="#{msgs['jsftoolkit.accept']}" process="portalSettingsGrid @this"
-                         action="#{userSettingsData.saveSettings}"
-                         icon="ui-icon-disk" styleClass="firstbtn" onclick="overlaySetPanel.hide()"/>
-        </ui:remove>
     </div>
 
 </ui:composition>

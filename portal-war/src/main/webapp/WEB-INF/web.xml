@@ -39,7 +39,7 @@
     </context-param>
     <context-param>
         <param-name>primefaces.THEME</param-name>
-        <param-value>bootstrap</param-value>
+        <param-value>#{userSettingsData.theme.name}</param-value>
     </context-param>
 
     <!-- FacesServlet -->

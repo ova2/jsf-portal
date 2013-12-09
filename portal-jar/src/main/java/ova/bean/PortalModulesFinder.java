@@ -10,6 +10,7 @@ import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.primefaces.extensions.model.fluidgrid.FluidGridItem;
 import ova.api.ModuleDescription;
 import ova.api.ModulesFinder;
 import ova.comparator.ModuleDescriptionComparator;
@@ -21,8 +22,6 @@ import ova.comparator.ModuleDescriptionComparator;
 @Named
 public class PortalModulesFinder implements ModulesFinder
 {
-	//~ Instance fields --------------------------------------------------------
-
 	@Any
 	@Inject
 	private Instance<ModuleDescription> moduleDescriptions;
@@ -30,21 +29,19 @@ public class PortalModulesFinder implements ModulesFinder
 	@Inject
 	private MessagesProxy msgs;
 
-	private List<ModuleDescription> modules;
-
-	//~ Methods ----------------------------------------------------------------
+	private List<FluidGridItem> modules;
 
 	@Override
-	public List<ModuleDescription> getModules()
+	public List<FluidGridItem> getModules()
 	{
 		if (modules != null) {
 			return modules;
 		}
 
-		modules = new ArrayList<ModuleDescription>();
+		modules = new ArrayList<FluidGridItem>();
 
 		for (ModuleDescription moduleDescription : moduleDescriptions) {
-			modules.add(moduleDescription);
+			modules.add(new FluidGridItem(moduleDescription));
 		}
 
 		// sort modules by names alphabetically

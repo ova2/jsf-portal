@@ -1,6 +1,7 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:p="http://primefaces.org/ui"
+                xmlns:pe="http://primefaces.org/ui/extensions"
                 xmlns:ui="http://java.sun.com/jsf/facelets"
                 template="/templates/masterLayout.xhtml">
     <ui:define name="content">
@@ -8,45 +9,32 @@
             <span id="loggedInIcon" class="ui-icon ui-icon-person"/>
             <h:outputText value="#{msgs['jsftoolkit.loggedInAs']} Oleg"/>
         </div>
-        
+
         <div id="portalWelcome">
             <h:outputText value="#{msgs['portal.welcome']}"/>
         </div>
-        
-        <ul id="modGridContent">
-            <ui:repeat value="#{portalModulesFinder.modules}" var="modDesc">
-                <li>
-                    <div class="ui-widget ui-widget-content ui-corner-all modGroupEntry">
-                        <h:panelGrid columns="2" styleClass="modGridEntry" columnClasses="modLogo,modTxt">
-                            <p:commandLink process="@this" action="#{navigationContext.goToPortlet(modDesc)}">
-                                <h:graphicImage library="#{modDesc.prefix}" name="#{modDesc.logoName}"/>
-                            </p:commandLink>
 
-                            <h:panelGroup>
-                                <p:commandLink process="@this" action="#{navigationContext.goToPortlet(modDesc)}">
-                                    <h:outputText value="#{modDesc.name}" styleClass="bold nowrap"/>
-                                </p:commandLink>
+        <pe:fluidGrid id="fluidGrid" value="#{portalModulesFinder.modules}" var="modDesc"
+                      fitWidth="true" hasImages="true">
+            <pe:fluidGridItem styleClass="ui-widget-header">
+                <h:panelGrid columns="2" styleClass="modGridEntry" columnClasses="modLogo,modTxt">
+                    <p:commandLink process="@this" action="#{navigationContext.goToPortlet(modDesc)}">
+                        <h:graphicImage library="#{modDesc.prefix}" name="#{modDesc.logoName}"/>
+                    </p:commandLink>
 
-                                <p/>
-                                <h:outputText value="#{modDesc.description}"/>
-                            </h:panelGroup>
-                        </h:panelGrid>                           
-                    </div>
-                </li>
-            </ui:repeat>
-        </ul>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $("#modGridContent").vgrid({
-                    time: 300,
-                    wait: 100,
-                    useLoadImageEvent: true
-                });
-            });
-        </script>
+                    <h:panelGroup>
+                        <p:commandLink process="@this" action="#{navigationContext.goToPortlet(modDesc)}">
+                            <h:outputText value="#{modDesc.name}" styleClass="linkToPortlet"/>
+                        </p:commandLink>
+
+                        <p/>
+                        <h:outputText value="#{modDesc.description}"/>
+                    </h:panelGroup>
+                </h:panelGrid>
+            </pe:fluidGridItem>
+        </pe:fluidGrid>
     </ui:define>
     <ui:define name="resources">
         <h:outputStylesheet library="css" name="portal.css"/>
-        <h:outputScript library="js" name="portal.js"/>
     </ui:define>
 </ui:composition>

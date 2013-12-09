@@ -45,6 +45,15 @@
                 <groupId>org.primefaces.extensions</groupId>
                 <artifactId>resources-optimizer-maven-plugin</artifactId>
                 <version>1.0.0</version>
+                <executions>
+                    <execution>
+                        <id>optimize</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>optimize</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <resourcesSets>
                         <resourcesSet>
@@ -79,24 +88,14 @@
             <version>1.1.0</version>
         </dependency>        
         <dependency>
-            <groupId>org.apache.myfaces.extensions.cdi.core</groupId>
-            <artifactId>myfaces-extcdi-core-api</artifactId>
-            <version>1.0.5</version>
+            <groupId>org.apache.deltaspike.core</groupId>
+            <artifactId>deltaspike-core-impl</artifactId>
+            <version>0.5</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.myfaces.extensions.cdi.core</groupId>
-            <artifactId>myfaces-extcdi-core-impl</artifactId>
-            <version>1.0.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.myfaces.extensions.cdi.modules</groupId>
-            <artifactId>myfaces-extcdi-jsf20-module-api</artifactId>
-            <version>1.0.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.myfaces.extensions.cdi.modules</groupId>
-            <artifactId>myfaces-extcdi-jsf20-module-impl</artifactId>
-            <version>1.0.5</version>
+            <groupId>org.apache.deltaspike.core</groupId>
+            <artifactId>deltaspike-core-impl</artifactId>
+            <version>0.5</version>
         </dependency>
         <dependency>
             <groupId>com.sun.faces</groupId>

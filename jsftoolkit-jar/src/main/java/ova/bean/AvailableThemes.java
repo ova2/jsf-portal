@@ -20,7 +20,7 @@ public class AvailableThemes
 
 		themes.add(new Theme("afterdark", "themeswitcher/afterdark.png"));
 		themes.add(new Theme("afternoon", "themeswitcher/afternoon.png"));
-		themes.add(new Theme("afternoon", "themeswitcher/afterwork.png"));
+		themes.add(new Theme("afterwork", "themeswitcher/afterwork.png"));
 		themes.add(new Theme("aristo", "themeswitcher/aristo.png"));
 		themes.add(new Theme("black-tie", "themeswitcher/black-tie.png"));
 		themes.add(new Theme("blitzer", "themeswitcher/blitzer.png"));

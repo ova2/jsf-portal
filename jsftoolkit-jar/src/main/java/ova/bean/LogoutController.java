@@ -21,7 +21,7 @@ public class LogoutController
 		ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
 		ec.invalidateSession();
 
-		return "/index.html";
+		return "/index.xhtml";
 	}
 
 	public String logout(String outcome) throws IOException

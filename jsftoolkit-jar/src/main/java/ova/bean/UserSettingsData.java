@@ -12,6 +12,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
@@ -38,6 +39,8 @@ public class UserSettingsData implements Serializable
 	@PostConstruct
 	protected void initialize()
 	{
+        settings = new HashMap<String, Object>();
+		
 		// ensure that all settings are set
 		FacesContext fc = FacesContext.getCurrentInstance();
 
@@ -56,7 +59,7 @@ public class UserSettingsData implements Serializable
 
 		Theme theme = getTheme();
 		if (theme == null) {
-	        setTheme(new Theme("bootstrap", "themeswitcher/bootstrap.png"));
+	        setTheme(getAvailableThemes().get(2));
 		}
 	}
     

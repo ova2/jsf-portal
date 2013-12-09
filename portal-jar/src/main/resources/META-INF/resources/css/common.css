@@ -16,41 +16,40 @@
     font-size: 16px;
 }
 
-#modGridContent {
-    list-style-type: none;
-    margin: 50px 20px 20px 20px;
+#fluidGrid {
+    margin: 40px 15px 15px 15px;
 }
 
-#modGridContent div.modGroupEntry {
-    position: relative;
+#fluidGrid .pe-fluidgrid-item {
     font-size: 14px !important;
-    max-width: 470px;
+    width: 480px;
+    max-width: 480px;
     min-height: 125px;
     margin: 10px;
     padding: 5px;
+    border-radius: 5px;
     -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-#modGridContent div.modGroupEntry .version {
-    position: absolute;
-    bottom: 13px;
-    margin: 0 8px 0 8px;
-    font-size: 11px;
-}
-
-#modGridContent .modGridEntry td.modLogo {
+#fluidGrid .pe-fluidgrid-item .modGridEntry td.modLogo {
     vertical-align: middle;
     text-align: center;
 }
 
-#modGridContent .modGridEntry td.modLogo img {
+#fluidGrid .pe-fluidgrid-item .modGridEntry td.modLogo img {
     vertical-align: middle;
 }
 
-#modGridContent .modGridEntry td.modTxt {
+#fluidGrid .pe-fluidgrid-item .modGridEntry td.modTxt {
     vertical-align: top;
     text-align: left;
     padding: 8px;
+}
+
+#fluidGrid .pe-fluidgrid-item .modGridEntry td.modTxt .linkToPortlet {
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
 }

@@ -45,6 +45,15 @@
                 <groupId>org.primefaces.extensions</groupId>
                 <artifactId>resources-optimizer-maven-plugin</artifactId>
                 <version>1.0.0</version>
+                <executions>
+                    <execution>
+                        <id>optimize</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>optimize</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <resourcesSets>
                         <resourcesSet>
@@ -56,19 +65,6 @@
                                 <aggregation>
                                     <outputFile>
                                         ${project.build.directory}/classes/META-INF/resources/css/portal.css
-                                    </outputFile>
-                                </aggregation>
-                            </aggregations>
-                        </resourcesSet>
-                        <resourcesSet>
-                            <inputDir>${project.build.directory}/classes/META-INF/resources/js</inputDir>
-                            <includes>
-                                <include>**/*.js</include>
-                            </includes>
-                            <aggregations>
-                                <aggregation>
-                                    <outputFile>
-                                        ${project.build.directory}/classes/META-INF/resources/js/portal.js
                                     </outputFile>
                                 </aggregation>
                             </aggregations>
