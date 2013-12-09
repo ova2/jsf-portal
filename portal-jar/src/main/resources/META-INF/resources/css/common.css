@@ -40,6 +40,7 @@
 
 #fluidGrid .pe-fluidgrid-item .modGridEntry td.modLogo img {
     vertical-align: middle;
+    border: none;
 }
 
 #fluidGrid .pe-fluidgrid-item .modGridEntry td.modTxt {
